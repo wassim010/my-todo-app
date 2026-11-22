@@ -1,5 +1,5 @@
 # Project 02 - Smart Calculator
-
+#wassim made a change
 def add(a, b):
     return a + b
 
