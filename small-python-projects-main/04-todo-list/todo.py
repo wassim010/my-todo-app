@@ -1,4 +1,6 @@
+
 # Project 04 - To-Do List that saves to file
+
 FILE_NAME = "tasks.txt"
 
 def load_tasks():
@@ -6,7 +8,7 @@ def load_tasks():
         with open(FILE_NAME, "r") as f:
             return [line.strip() for line in f.readlines()]
     except FileNotFoundError:
-        return []  # if file doesn't exist yet, start empty
+        return []
 
 def save_tasks(tasks):
     with open(FILE_NAME, "w") as f:
@@ -18,8 +20,8 @@ tasks = load_tasks()
 print("--- Your To-Do List ---")
 
 while True:
-    print("\n1. View Tasks  2. Add Task  3. Delete Task  4. Exit")
-    choice = input("Choose (1-4): ")
+    print("\n1. View Tasks  2. Add Task  3. Delete Task  4. Exit  5. Count Tasks")
+    choice = input("Choose (1-5): ")
 
     if choice == '1':
         if not tasks:
@@ -43,7 +45,7 @@ while True:
                 print(f"{i}. {task}")
             try:
                 num = int(input("Enter task number to delete: "))
-                removed = tasks.pop(num-1)
+                removed = tasks.pop(num - 1)
                 save_tasks(tasks)
                 print(f"Deleted: {removed}")
             except:
@@ -52,5 +54,9 @@ while True:
     elif choice == '4':
         print("Bye! Your tasks are saved in tasks.txt")
         break
+
+    elif choice == '5':
+        print(f"\nTotal number of tasks: {len(tasks)}")
+
     else:
         print("Invalid choice")
