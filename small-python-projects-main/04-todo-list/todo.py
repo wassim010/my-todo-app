@@ -1,10 +1,7 @@
 
 # Project 04 - To-Do List that saves to file
-<<<<<<< HEAD
-#wassim made a change
-=======
 
->>>>>>> origin/feature-ali
+#wassim made a change
 FILE_NAME = "tasks.txt"
 
 
