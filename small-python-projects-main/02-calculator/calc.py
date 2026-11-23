@@ -1,5 +1,6 @@
 # Project 02 - Smart Calculator
 #wassim made a change
+#wassim made second change
 def add(a, b):
     return a + b
 
